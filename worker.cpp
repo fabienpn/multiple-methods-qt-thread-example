@@ -135,6 +135,7 @@ void Worker::mainLoop()
         _interrupt = false;
 
         if (_abort) {
+            qDebug()<<"Aborting worker mainLoop in Thread "<<thread()->currentThreadId();
             emit finished();
             return;
         }
